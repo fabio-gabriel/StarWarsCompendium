@@ -6,16 +6,16 @@ export default function HomeNavbar() {
     <header className="header-home">
       <ul>
         <li>
-          <Link to="/"> Planets </Link>
+          <Link to="/planets"> PLANETS </Link>
         </li>
         <li>
-          <Link to="/planets"> Characters </Link>
+          <Link to="/characters"> CHARACTERS </Link>
         </li>
         <li>
-          <Link to="/planets"> Movies </Link>
+          <Link to="/movies"> MOVIES </Link>
         </li>
         <li>
-          <Link to="/planets"> Species </Link>
+          <Link to="/species"> SPECIES </Link>
         </li>
       </ul>
     </header>
