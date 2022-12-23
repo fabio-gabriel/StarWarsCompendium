@@ -1,0 +1,28 @@
+.home-page {
+
+  .hero {
+    display: grid;
+    height: 100vh;
+    background-image: url("../Images/space-background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+
+    img {
+      position: fixed;
+      place-self: center;
+      width: 30rem;
+      height: auto;
+    }
+
+  }
+
+  h1 {
+    position: relative;
+    margin: 0;
+    background-color: red;
+    text-align: center;
+    z-index: 20;
+    height: 100vh;
+  }
+}
