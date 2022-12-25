@@ -5,7 +5,7 @@ import Planets from "./Pages/Planets";
 import Species from "./Pages/Species";
 import Characters from "./Pages/Characters";
 import Movies from "./Pages/Movies";
-import HomeNavbar from "./Components/HomeNavbar";
+import HomeNavbar from "./components/HomeNavbar";
 
 function App() {
   return (
