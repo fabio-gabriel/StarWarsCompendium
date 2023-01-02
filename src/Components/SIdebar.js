@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import api from "../services/api";
 import "../Styles/Sidebar.scss";
 
-export default function Sidebar() {
+export default function Sidebar({ request }) {
   const [list, setList] = useState({ count: 0, results: [] });
 
   async function getResults() {
     try {
-      let location = "/people";
+      let location = request;
       let loop = true;
       let finalList = [];
       let finalCount = 0;

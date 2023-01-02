@@ -10,7 +10,7 @@ function Characters() {
         <img src={vader} />
       </div>
       <div className="content">
-        <Sidebar request={"people"} />
+        <Sidebar request={"/people"} />
         <MainContent />
       </div>
     </div>
