@@ -7,6 +7,7 @@ export default function PanelProvider(props) {
   const [data, setData] = useState({ name: "Please select a character" });
 
   const updateData = (type, id) => {
+    console.log(type + "/" + id);
     api
       .get("/" + type + "/" + id)
       .then((response) => setData(response.data))

@@ -19,10 +19,8 @@ export default function HomeNavbar() {
           </li>
           <li>
             <Link
-              to="/characters"
-              className={
-                location.pathname === "/characters" ? "selected" : null
-              }
+              to="/people"
+              className={location.pathname === "/people" ? "selected" : null}
             >
               CHARACTERS
             </Link>

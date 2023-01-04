@@ -1,8 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { useLocation } from "react-router-dom";
+import { PanelContext } from "../contexts/PanelContext";
 import api from "../services/api";
 import "../Styles/Sidebar.scss";
 
 export default function Sidebar({ request }) {
+  const Context = useContext(PanelContext);
+  let location = useLocation().pathname;
+  location = location.substring(1);
+
   const [list, setList] = useState({ count: 0, results: [] });
 
   async function getResults() {
@@ -40,8 +46,15 @@ export default function Sidebar({ request }) {
     <div>
       <p>Total ({list.count})</p>
       <ul>
-        {list.results.map((item) => {
-          return <li key={item.name}>{item.name}</li>;
+        {list.results.map((item, index) => {
+          return (
+            <li
+              onClick={() => Context.updateData(location, index + 1)}
+              key={item.name}
+            >
+              {item.name}
+            </li>
+          );
         })}
       </ul>
     </div>
