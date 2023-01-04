@@ -1,10 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, memo } from "react";
 import { useLocation } from "react-router-dom";
 import { PanelContext } from "../contexts/PanelContext";
 import api from "../services/api";
 import "../Styles/Sidebar.scss";
 
-export default function Sidebar({ request }) {
+function Sidebar({ request }) {
   const Context = useContext(PanelContext);
   let location = useLocation().pathname;
   location = location.substring(1);
@@ -60,3 +60,5 @@ export default function Sidebar({ request }) {
     </div>
   );
 }
+
+export default memo(Sidebar);
