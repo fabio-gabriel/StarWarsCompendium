@@ -3,11 +3,11 @@ import MainContent from "./MainContent";
 import Sidebar from "./Sidebar";
 import "../Styles/MainPanel.scss";
 
-export default function MainPanel() {
+export default function MainPanel({request}) {
   return (
     <PanelProvider>
       <div className="content">
-        <Sidebar request={"/people"} />
+        <Sidebar request={request} />
         <MainContent />
       </div>
     </PanelProvider>

@@ -35,8 +35,8 @@ export default function HomeNavbar() {
           </li>
           <li>
             <Link
-              to="/movies"
-              className={location.pathname === "/movies" ? "selected" : null}
+              to="/films"
+              className={location.pathname === "/films" ? "selected" : null}
             >
               MOVIES
             </Link>

@@ -7,7 +7,7 @@ export const PanelContext = createContext();
 
 export default function PanelProvider(props) {
   const [data, setData] = useState({
-    name: "Please select a character",
+    name: "Please select from the sidebar",
     films: [],
   });
 

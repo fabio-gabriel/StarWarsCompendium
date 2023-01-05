@@ -21,7 +21,7 @@ export default function MainContent() {
     <div className="main">
       <p className="title">{Context.data.name}</p>
       <ul>{mainData}</ul>
-      <div className="movies">{Context.returnFilms()}</div>
+      <div className="movies">{Context.data.films ? Context.returnFilms() : null}</div>
     </div>
   );
 }

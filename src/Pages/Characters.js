@@ -8,7 +8,7 @@ function Characters() {
       <div className="image">
         <img src={vader} />
       </div>
-      <MainPanel />
+      <MainPanel request={"/people"}/>
     </div>
   );
 }

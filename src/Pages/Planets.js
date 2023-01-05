@@ -1,7 +1,14 @@
+import vader from "../Images/Vader Image.png";
+import "../Styles/Pages.scss";
+import MainPanel from "../Components/MainPanel";
+
 function Planets() {
   return (
     <div>
-      <h1> Planets </h1>
+      <div className="image">
+        <img src={vader} />
+      </div>
+      <MainPanel request={"/planets"}/>
     </div>
   );
 }

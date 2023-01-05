@@ -52,7 +52,7 @@ function Sidebar({ request }) {
               onClick={() => Context.updateData(location, index + 1)}
               key={item.name}
             >
-              {item.name}
+              {item.name ? item.name : item.title}
             </li>
           );
         })}

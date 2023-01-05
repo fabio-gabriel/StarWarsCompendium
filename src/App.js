@@ -16,7 +16,7 @@ function App() {
         <Route exact path="/planets" element={<Planets />} />
         <Route exact path="/species" element={<Species />} />
         <Route exact path="/people" element={<Characters />} />
-        <Route exact path="/movies" element={<Movies />} />
+        <Route exact path="/films" element={<Movies />} />
       </Routes>
     </div>
   );
