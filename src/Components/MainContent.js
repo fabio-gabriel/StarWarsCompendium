@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { PanelContext } from "../contexts/PanelContext";
+import api from "../services/api";
 import "../Styles/MainContent.scss";
 
 export default function MainContent() {
@@ -16,9 +17,8 @@ export default function MainContent() {
     );
   }
 
-  let location = useLocation().pathname;
-  //remove final useless elements
-  switch (location.substring(1)) {
+  //remove final useless elements/minimize api calls
+  switch (useLocation().pathname.substring(1)) {
     case "people":
       mainData = mainData.slice(1, -8);
       break;
@@ -28,6 +28,7 @@ export default function MainContent() {
       mainData = mainData.slice(1, -8);
     case "species":
       mainData = mainData.slice(1, -5);
+      mainData.splice(7, 1);
     default:
       break;
   }

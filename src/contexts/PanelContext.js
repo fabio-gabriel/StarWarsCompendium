@@ -11,10 +11,19 @@ export default function PanelProvider(props) {
     films: [],
   });
 
+  let species;
+
   const updateData = (type, id) => {
     api
       .get("/" + type + "/" + id)
       .then((response) => setData(response.data))
+      .catch((err) => {
+        console.error("Error fetching the API: " + err);
+      });
+
+    api
+      .get("/species/" + id)
+      .then((response) => setData(...data, species))
       .catch((err) => {
         console.error("Error fetching the API: " + err);
       });
